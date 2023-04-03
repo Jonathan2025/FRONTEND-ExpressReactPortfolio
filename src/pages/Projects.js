@@ -25,9 +25,24 @@ function Projects(props) {
         getProjectsData()
     }, [])
 
+    // 20 define a loaded function that will return the JSX needed once we get the data
+    const loaded = () => {
+        return projects.map((project) => (
+          <div>
+            <h1>{project.name}</h1>
+            <img src={project.image} />
+            <a href={project.git}>
+              <button>Github</button>
+            </a>
+            <a href={project.live}>
+              <button>live site</button>
+            </a>
+          </div>
+        ));
+      }
 
-
-    return <h1>Projects</h1>;
+    // 21 Ternitary operator that returns the loaded funciton if there is project data 
+    return projects ? loaded() : <h1>Loading...</h1>
   }
   
   export default Projects;
