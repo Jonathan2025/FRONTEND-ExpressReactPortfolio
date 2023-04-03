@@ -1,4 +1,3 @@
-
 import './App.css';
 
 // 4 Delete the original boiler plate and import the Components, pages and routes from router dom 
@@ -13,7 +12,6 @@ import Projects from "./pages/Projects";
 
 
 
-
 function App() {
   // 5) URL should have YOUR HEROKU URL for your backend, make sure you include the trailing slash
   const URL = "http://localhost:4000/"
@@ -23,6 +21,8 @@ function App() {
 
 
   return (
+    
+
     //6 added in the new boiler plate which has paths to the home, project and about page
     <div className="App">
       <Header />
@@ -33,6 +33,7 @@ function App() {
       </Routes>
       <Footer />
     </div>
+   
   );
 }
 

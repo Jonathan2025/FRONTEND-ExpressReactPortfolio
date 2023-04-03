@@ -12,12 +12,12 @@ function Projects(props) {
     //18 create function to make api call to get the data
     const getProjectsData = async () => {
     //make api call and get response
-    const response = await fetch(props.URL + "projects");
-    // turn response into javascript object
-    const data = await response.json();
-    // set the projects state to the data
-    setProjects(data)
-    console.log(data)
+        const response = await fetch(props.URL + "projects");
+        // turn response into javascript object
+        const data = await response.json();
+        // set the projects state to the data
+        setProjects(data)
+        console.log(data)
   }
 
     // 19 make an initial call for the data inside a useEffect, so it only happens once on component load
@@ -30,12 +30,17 @@ function Projects(props) {
         return projects.map((project) => (
           <div>
             <h1>{project.name}</h1>
-            <img src={project.image} />
+
+            {/* 22 now we want to add in the link to the image because before it wasnt rendering */}
+            <img src={`${props.URL}/${project.image}`} alt={project.name} width="300" height="240"/>
+            {/* <img src={`${project.image}`} /> */}
+            <br></br>
+
             <a href={project.git}>
               <button>Github</button>
             </a>
             <a href={project.live}>
-              <button>live site</button>
+              <button>Live Site</button>
             </a>
           </div>
         ));
