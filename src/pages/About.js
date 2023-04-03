@@ -23,6 +23,16 @@ function About(props) {
     useEffect(() => getAboutData(), [])
     
 
+    // 14 define a loaded function that will return the JSX needed once we get the data
+    const loaded = () => (
+        <div>
+          <h2>{about.name}</h2>
+          <h3>{about.email}</h3>
+          <p>{about.bio}</p>
+        </div>
+      )
+
+
 
     return <h1>About</h1>;
   }
