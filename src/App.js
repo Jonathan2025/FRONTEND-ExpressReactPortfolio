@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 // 4 Delete the original boiler plate and import the Components, pages and routes from router dom 

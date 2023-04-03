@@ -16,11 +16,14 @@ function About(props) {
         // turn response into javascript object
         const data = await response.json();
         // set the about state to the data
-        setAbout(data);
+        setAbout(data)
+        console.log(data) // {name: 'Jonathan Liang', email: 'Jonathan.Liang75@outlook.com'...
       }
     
     // 13  make an initial call for the data inside a useEffect, so it only happens once on component load
-    useEffect(() => getAboutData(), [])
+    useEffect(()=> {
+        getAboutData()
+    }, [])
     
 
     // 14 define a loaded function that will return the JSX needed once we get the data
