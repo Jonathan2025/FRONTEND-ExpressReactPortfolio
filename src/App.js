@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 
+// 4 Delete the original boiler plate and import the Components, pages and routes from router dom 
+// IMPORT COMPONENTS
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+// IMPORT PAGES
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+
+
+
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+
     </div>
   );
 }
