@@ -34,7 +34,9 @@ function About(props) {
 
 
 
-    return <h1>About</h1>;
+    // return <h1>About</h1>;
+    // 15 if data arrives return the result of loaded, if not, an h1 that says loading
+    return about ? loaded() : <h1>Loading...</h1>
   }
   
   export default About;
