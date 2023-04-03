@@ -18,6 +18,10 @@ function About(props) {
         // set the about state to the data
         setAbout(data);
       }
+    
+    // 13  make an initial call for the data inside a useEffect, so it only happens once on component load
+    useEffect(() => getAboutData(), [])
+    
 
 
     return <h1>About</h1>;
