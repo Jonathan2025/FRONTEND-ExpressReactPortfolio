@@ -23,9 +23,15 @@ function App() {
 
 
   return (
+    //6 added in the new boiler plate which has paths to the home, project and about page
     <div className="App">
-      
-
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/projects" element={<Projects URL={URL}/>}/>
+        <Route exact path="/about" element={<About URL={URL}/>}/>
+      </Routes>
+      <Footer />
     </div>
   );
 }
