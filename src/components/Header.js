@@ -17,7 +17,7 @@ function Header(props) {
   // 9 return statement that will render the links to the pages, we also added in the style from above in step 8
   return (
     <header>
-      <h1 className="headerText">Jonathan's Portfolio Page</h1>
+      {/* <h1 className="headerText">Jonathan's Portfolio</h1> */}
       {/* <nav style={navStyle}> */}
       <nav className="navStyle">
         <Link to="/" activeClassName="active">

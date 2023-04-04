@@ -30,15 +30,16 @@ function Footer(props) {
   }, []);
 
   return (
-    <footer>
-      <p>Contact:</p>
-      {/* <p><FontAwesomeIcon icon={faEnvelope} /> {contactInfo.email}</p>
-      <p><FontAwesomeIcon icon={faLinkedin} /> {contactInfo.linkedin}</p>
-    <p><FontAwesomeIcon icon={faGithub} /> {contactInfo.github}</p> */}
-      <p> {contactInfo.email}</p>
-      <p> {contactInfo.linkedin}</p>
-     <p> {contactInfo.github}</p>
-
+    <footer className="footer">
+      <div className="contact">
+        <p>Contact:</p>
+        <br></br>
+      </div>
+      <div>
+        <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+        <a href={contactInfo.linkedin} target="_blank" rel="noopener noreferrer">{contactInfo.linkedin}</a>
+        <a href={contactInfo.github} target="_blank" rel="noopener noreferrer">{contactInfo.github}</a>
+      </div>
     </footer>
   );
 }

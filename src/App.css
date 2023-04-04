@@ -84,7 +84,7 @@
   width:50%;
   margin: auto;
   background-color: rgba(238, 219, 0, 0.7);
-
+  border: 3px solid black;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -107,3 +107,21 @@
 .headerText{
   color:white;
 }
+
+
+
+.footer a{
+  margin-right: 20px;
+}
+
+.footer {
+  background-color:#C0C0C0;
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid black;
+  padding: 8px;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
