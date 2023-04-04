@@ -31,10 +31,7 @@ function Footer(props) {
 
   return (
     <footer className="footer">
-      <div className="contact">
-        <p>Contact:</p>
-        <br></br>
-      </div>
+      
       <div>
         <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
         <a href={contactInfo.linkedin} target="_blank" rel="noopener noreferrer">{contactInfo.linkedin}</a>
