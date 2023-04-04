@@ -1,12 +1,12 @@
 .App {
   text-align: center;
-  background-color: #4B9CD3;
+  background-color: #6CB4EE;
 }
 
 
 /* modifying the navigation bar from header component */
 .navStyle {
-  background-color: #FAF9F6;
+  background-color:#C0C0C0;
   display: flex;
   justify-content: space-around;
   border: 3px solid black;
@@ -41,7 +41,7 @@
 
 /* modifying the about info from the about.js */
 .aboutInfo{
-  background-color: #FAF9F6;
+  background-color: #C0C0C0;
   justify-content: space-around;
   border: 3px solid black;
   padding: 8px;
