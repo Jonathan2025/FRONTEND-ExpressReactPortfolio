@@ -32,6 +32,8 @@ function About(props) {
           <h2>{about.name}</h2>
           <h3>{about.email}</h3>
           <p>{about.bio}</p>
+          {/* 22 now we want to add in the link to our profile */}
+          <img src={`${props.URL}/${about.headshot}`} alt={about.headshot} width="300" height="280"/>
         </div>
       )
 
