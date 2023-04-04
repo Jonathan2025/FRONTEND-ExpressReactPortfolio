@@ -1,11 +1,12 @@
 .App {
   text-align: center;
-  background-color: #7CB9E8;
+  background-color: #4B9CD3;
 }
 
 
 /* modifying the navigation bar from header component */
 .navStyle {
+  background-color: #FAF9F6;
   display: flex;
   justify-content: space-around;
   border: 3px solid black;
@@ -15,9 +16,32 @@
   margin-bottom: 20px;
 }
 
+/* make the tab that the user clicks on in the nav bar active */
+.navStyle a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.navStyle a:focus,
+.navStyle a:active {
+  color: #fff;
+  background-color: #7CB9E8;
+  border-color: #7CB9E8;
+}
+
+.navStyle a:hover {
+  color: #7CB9E8;
+  border-color: #7CB9E8;
+}
+
+
+
+
 /* modifying the about info from the about.js */
 .aboutInfo{
-  background-color: white;
+  background-color: #FAF9F6;
   justify-content: space-around;
   border: 3px solid black;
   padding: 8px;
