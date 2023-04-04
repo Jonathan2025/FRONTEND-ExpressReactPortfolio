@@ -3,9 +3,6 @@
   background-color: #7CB9E8;
 }
 
-.aboutInfo{
-  background-color: white;
-}
 
 /* modifying the navigation bar from header component */
 .navStyle {
@@ -15,4 +12,19 @@
   padding: 8px;
   width: 90%;
   margin: auto;
+  margin-bottom: 20px;
+}
+
+/* modifying the about info from the about.js */
+.aboutInfo{
+  background-color: white;
+  justify-content: space-around;
+  border: 3px solid black;
+  padding: 8px;
+  width: 60%;
+  margin: auto;
+}
+
+#aboutBio{
+  text-align: left;
 }

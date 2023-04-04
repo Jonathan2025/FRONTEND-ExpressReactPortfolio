@@ -31,7 +31,7 @@ function About(props) {
         <div className="aboutInfo">
           <h2>{about.name}</h2>
           <h3>{about.email}</h3>
-          <p>{about.bio}</p>
+          <p id="aboutBio">{about.bio}</p>
           {/* 23 now we want to add in our headshot to our profile */}
           <img src={`${props.URL}/${about.headshot}`} alt={about.headshot} width="300" height="280"/>
         </div>
