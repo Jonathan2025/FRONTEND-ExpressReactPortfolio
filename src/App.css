@@ -1,7 +1,10 @@
 .App {
   text-align: center;
   /* background-color: #6CB4EE; */
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
 }
 
 
@@ -112,7 +115,7 @@
   margin-right: 20px;
 }
 
-.footer {
+/* .footer {
   background-color:#C0C0C0;
   display: flex;
   justify-content: space-around;
@@ -121,5 +124,17 @@
   width: 60%;
   margin: auto;
   margin-top: 20px;
-}
+} */
 
+.footer {
+  background-color: #c0c0c0;
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid black;
+  padding: 8px;
+  width: 70%;
+  margin: auto;
+  /* position: fixed; Set position to fixed */
+  bottom: 0; /* Set bottom property to 0 */
+  margin-top: 20px;
+}
