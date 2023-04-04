@@ -5,20 +5,21 @@ import { Link } from "react-router-dom"
 function Header(props) {
 
   //8) simple inline style for the nav tag and we will use it below in step 9
-  const navStyle = {
-    display: "flex",
-    justifyContent: "space-around",
-    border: "3px solid black",
-    padding: "8px",
-    width: "90%",
-    margin: "auto",
-  }
+  // const navStyle = {
+  //   display: "flex",
+  //   justifyContent: "space-around",
+  //   border: "3px solid black",
+  //   padding: "8px",
+  //   width: "90%",
+  //   margin: "auto",
+  // }
 
   // 9 return statement that will render the links to the pages, we also added in the style from above in step 8
   return (
     <header>
       <h1>My Portfolio Page</h1>
-      <nav style={navStyle}>
+      {/* <nav style={navStyle}> */}
+      <nav className="navStyle">
         <Link to="/">
           <div>HOME</div>
         </Link>
