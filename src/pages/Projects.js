@@ -28,20 +28,23 @@ function Projects(props) {
     // 20 define a loaded function that will return the JSX needed once we get the data
     const loaded = () => {
         return projects.map((project) => (
-          <div>
+          <div className="card">
+             
+            <div className="projectContainer">
             <h1>{project.name}</h1>
-
             {/* 22 now we want to add in the link to the image because before it wasnt rendering */}
-            <img src={`${props.URL}/${project.image}`} alt={project.name} width="300" height="240"/>
-            {/* <img src={`${project.image}`} /> */}
-            <br></br>
+            <img className="projectImage" src={`${props.URL}/${project.image}`} alt={project.name} width="300" height="240"/>
+                <br></br>
+                  <a href={project.git}>
+                    <button>Github</button>
+                  </a>
+                  <a href={project.live}>
+                    <button>Live Site</button>
+                  </a>
+            </div>
 
-            <a href={project.git}>
-              <button>Github</button>
-            </a>
-            <a href={project.live}>
-              <button>Live Site</button>
-            </a>
+
+
           </div>
         ));
       }

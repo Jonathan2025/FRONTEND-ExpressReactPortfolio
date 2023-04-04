@@ -7,8 +7,8 @@
 
 
 // import the icons from font awesome 
-import { faGithub, faLinkedin, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faGithub, faLinkedin, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useState, useEffect } from "react";
 
@@ -32,9 +32,13 @@ function Footer(props) {
   return (
     <footer>
       <p>Contact:</p>
-      <p><FontAwesomeIcon icon={faEnvelope} /> {contactInfo.email}</p>
+      {/* <p><FontAwesomeIcon icon={faEnvelope} /> {contactInfo.email}</p>
       <p><FontAwesomeIcon icon={faLinkedin} /> {contactInfo.linkedin}</p>
-      <p><FontAwesomeIcon icon={faGithub} /> {contactInfo.github}</p>
+    <p><FontAwesomeIcon icon={faGithub} /> {contactInfo.github}</p> */}
+      <p> {contactInfo.email}</p>
+      <p> {contactInfo.linkedin}</p>
+     <p> {contactInfo.github}</p>
+
     </footer>
   );
 }
