@@ -52,3 +52,22 @@
 #aboutBio{
   text-align: left;
 }
+
+
+/* adding text over the home image */
+.homeImage {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+#textOverHomeImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
