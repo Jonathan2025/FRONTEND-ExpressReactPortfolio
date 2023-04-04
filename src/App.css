@@ -1,6 +1,9 @@
 .App {
   text-align: center;
-  background-color: #6CB4EE;
+  /* background-color: #6CB4EE; */
+  background-image: url('https://wallpaperaccess.com/full/1801911.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -41,7 +44,7 @@
 
 /* modifying the about info from the about.js */
 .aboutInfo{
-  background-color:  #EEDB00;
+  background-color: rgba(238, 219, 0, 0.7);
   justify-content: space-around;
   border: 3px solid black;
   padding: 8px;
@@ -80,7 +83,7 @@
   transition: 0.3s;
   width:50%;
   margin: auto;
-  background-color: #EEDB00;
+  background-color: rgba(238, 219, 0, 0.7);
 
 }
 
@@ -98,4 +101,9 @@
 .projectImage{
   max-width: 100%;
   height: auto;
+}
+
+
+.headerText{
+  color:white;
 }
