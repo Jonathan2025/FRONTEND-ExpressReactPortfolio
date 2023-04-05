@@ -1,5 +1,5 @@
 // 10) import useState and useEffect from react 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 
 
@@ -10,7 +10,8 @@ function About(props) {
     const [about, setAbout] = useState(null);
 
     // 12 create an asynchronous function to make an API call 
-    const getAboutData = async () => {
+    // in order to work with netlify we use useCallback to prevent unnecessary re-renders of child components that depend on a function prop
+    const getAboutData = useCallback(async () => {
         // make api call and get response
         const response = await fetch(props.URL + "about");
         // turn response into javascript object
@@ -18,7 +19,7 @@ function About(props) {
         // set the about state to the data
         setAbout(data)
         console.log(data) // {name: 'Jonathan Liang', email: 'Jonathan.Liang75@outlook.com'...
-      }
+      }, [props.URL])
     
     // 13  make an initial call for the data inside a useEffect, so it only happens once on component load
     // add a dependency array [getAboutData]to fix the error we get from netlify. [getAboutData] is not an actual array we defined, its just a dependency array of the useeffect
