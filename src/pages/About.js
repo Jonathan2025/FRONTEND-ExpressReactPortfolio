@@ -11,6 +11,7 @@ function About(props) {
 
     // 12 create an asynchronous function to make an API call 
     // in order to work with netlify we use useCallback to prevent unnecessary re-renders of child components that depend on a function prop
+    // this is based on the recommendation from netlify error message
     const getAboutData = useCallback(async () => {
         // make api call and get response
         const response = await fetch(props.URL + "about");

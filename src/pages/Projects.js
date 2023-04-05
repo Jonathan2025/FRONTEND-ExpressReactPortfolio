@@ -1,5 +1,5 @@
 // 16 import useState and useEffect from react 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 
 
@@ -10,7 +10,9 @@ function Projects(props) {
     const [projects, setProjects] = useState(null)
 
     //18 create function to make api call to get the data
-    const getProjectsData = async () => {
+     // in order to work with netlify we use useCallback to prevent unnecessary re-renders of child components that depend on a function prop
+    // this is based on the recommendation from netlify error message
+    const getProjectsData = useCallback(async () => {
     //make api call and get response
         const response = await fetch(props.URL + "projects");
         // turn response into javascript object
@@ -18,7 +20,7 @@ function Projects(props) {
         // set the projects state to the data
         setProjects(data)
         console.log(data)
-  }
+  }, [props.URL])
 
     // 19 make an initial call for the data inside a useEffect, so it only happens once on component load
     // add a dependency array [getProjectstData]to fix the error we get from netlify. [getProjectsData] is not an actual array we defined, its just a dependency array of the useeffect
