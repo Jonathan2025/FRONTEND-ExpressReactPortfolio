@@ -21,9 +21,11 @@ function Projects(props) {
   }
 
     // 19 make an initial call for the data inside a useEffect, so it only happens once on component load
-    useEffect(()=> {
-        getProjectsData()
-    }, [])
+     // comment this out and then add the new useEffect below to make it work with Netlify 
+    // useEffect(()=> {
+    //     getProjectsData()
+    // }, [])
+    useEffect(() => getProjectsData(), [])
 
     // 20 define a loaded function that will return the JSX needed once we get the data
     const loaded = () => {
