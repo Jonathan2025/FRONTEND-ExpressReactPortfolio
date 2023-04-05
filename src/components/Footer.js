@@ -18,7 +18,7 @@ function Footer(props) {
   // https://dev.to/antdp425/react-fetch-data-from-api-with-useeffect-27le
   
   const [contactInfo, setContactInfo] = useState({});
-  const URL = "http://localhost:4000/contact";
+  const URL = "https://jonathan-liang-portfolio.herokuapp.com/contact";
 
   //useEffect hook to make an API call using the fetch function
   useEffect(() => {
