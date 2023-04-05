@@ -21,11 +21,13 @@ function Projects(props) {
   }
 
     // 19 make an initial call for the data inside a useEffect, so it only happens once on component load
-     // comment this out and then add the new useEffect below to make it work with Netlify 
-    // useEffect(()=> {
-    //     getProjectsData()
-    // }, [])
-    useEffect(() => getProjectsData(), [])
+    // add a dependency array [getProjectstData]to fix the error we get from netlify. [getProjectsData] is not an actual array we defined, its just a dependency array of the useeffect
+
+    
+    useEffect(()=> {
+        getProjectsData()
+    }, [getProjectsData])
+    
 
     // 20 define a loaded function that will return the JSX needed once we get the data
     const loaded = () => {

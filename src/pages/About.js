@@ -21,11 +21,11 @@ function About(props) {
       }
     
     // 13  make an initial call for the data inside a useEffect, so it only happens once on component load
-    // comment this out and then add the new useEffect below to make it work with Netlify 
-    // useEffect(()=> {
-    //     getAboutData()
-    // }, [])
-    useEffect(() => getAboutData(), [])
+    // add a dependency array [getAboutData]to fix the error we get from netlify. [getAboutData] is not an actual array we defined, its just a dependency array of the useeffect
+    useEffect(()=> {
+        getAboutData()
+    }, [getAboutData])
+    
 
     // 14 define a loaded function that will return the JSX needed once we get the data
     const loaded = () => (
