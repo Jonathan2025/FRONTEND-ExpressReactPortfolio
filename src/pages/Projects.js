@@ -40,6 +40,7 @@ function Projects(props) {
             <h1>{project.name}</h1>
             {/* 22 now we want to add in the link to the image because before it wasnt rendering */}
             <img className="projectImage" src={`${props.URL}/${project.image}`} alt={project.name} width="300" height="240"/>
+                <p>{project.description}</p>
                 <br></br>
                   <a href={project.git}>
                     <button>Github</button>
